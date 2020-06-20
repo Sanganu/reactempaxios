@@ -17,8 +17,9 @@ class Employee extends Component{
                     fname: emprec[i].name.first,
                     lname: emprec[i].name.last,
                     email: emprec[i].email,
-                    phone: emprec[i].nat,
-                    profile:`<img src = ${emprec[i].picture.medium} />`
+                    nationality: emprec[i].nat,
+                    phone:emprec[i].phone,
+                    profile:`${emprec[i].picture.medium}`
                 }
                 employeedata.push(record)
             }
@@ -28,10 +29,8 @@ class Employee extends Component{
         })
     }
     render(){
-        return (<div className="jumbotron bg-warning">
-        <h5> Employee Directory</h5>
-        <h6>An app using axios, mdbreact Datatable</h6>
-        <EmployeeData rows={this.state.rows}/>
+        return (<div className="container bg-info">
+                <EmployeeData rows={this.state.rows}/>
             </div>)
     }
 }

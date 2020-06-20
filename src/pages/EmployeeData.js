@@ -23,12 +23,17 @@ function EmployeeData(props){
                 field:"email"
             },
             {
+                label:"Nationality",
+                field:"nationality"
+            }, 
+            {
                 label:"Phone",
                 field:"phone"
             },
             {
                 label:"Profile",
-                field:"profile"
+                field:"profile",
+                tag:"img"
             }
         ],
         rows: props.rows
