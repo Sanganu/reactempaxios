@@ -18,8 +18,8 @@ class Employee extends Component{
                     lname: emprec[i].name.last,
                     email: emprec[i].email,
                     nationality: emprec[i].nat,
-                    phone:emprec[i].phone,
-                    profile:`${emprec[i].picture.medium}`
+                    phone:emprec[i].phone
+                  
                 }
                 employeedata.push(record)
             }
