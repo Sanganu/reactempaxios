@@ -62,7 +62,7 @@ function Oneemp() {
            })
            setEmpRecords({rows : employeedetails})  
           
-           console.log(emprecords)    
+           console.log("EMP",emprecords)    
                
          },[])
     })
