@@ -10,41 +10,40 @@ import axios from "axios";
 //npm install mdbreact;
 
 function Oneemp() {
-    let [emprecords,setEmpRecords] = useState({
-        columns: [
-            {
-                label:"First Name",
-                field:"fname",
-                sort:"asc",
-                width:150
-            },
-            {
-                label:"Last Name",
-                field:"lname",
-                sort:"asc",
-                width:150
-            },
-            {
-                label:"Email",
-                field:"email",
-                sort:"asc",
-                width:150
-            },
-            {
-                label:"Phone number",
-                field:"phone",
-                sort:"asc",
-                width:150
-            },
-            {
-                label:"Location",
-                field:"location",
-                sort:"asc",
-                width:150
-            }
-        ],
-        rows: []
-    });
+    let [stateRows,setStateRows] = useState([]);
+
+    const columns = [
+        {
+            label:"First Name",
+            field:"fname",
+            sort:"asc",
+            width:150
+        },
+        {
+            label:"Last Name",
+            field:"lname",
+            sort:"asc",
+            width:150
+        },
+        {
+            label:"Email",
+            field:"email",
+            sort:"asc",
+            width:150
+        },
+        {
+            label:"Phone number",
+            field:"phone",
+            sort:"asc",
+            width:150
+        },
+        {
+            label:"Location",
+            field:"location",
+            sort:"asc",
+            width:150
+        }
+    ]
 
     useEffect(() => {
         axios.get("https://randomuser.me/api/?results=200&nat=us")
@@ -60,15 +59,13 @@ function Oneemp() {
                }
                return(rec)
            })
-           setEmpRecords({rows : employeedetails})  
-          
-           console.log("EMP",emprecords)    
-               
-         },[])
-    })
+           setStateRows(employeedetails)  
+         })
+        } 
+       ,[ ])
     
     return(<div>
-        <MDBDataTable striped bordered hover data={emprecords} />
+        <MDBDataTable striped bordered hover data={{columns: columns,rows:stateRows}} />
         </div>)
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Employee from "./pages/Employee";
 import Oneemp from "./pages/Oneemp";
 
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -20,7 +21,8 @@ function App() {
                   <Employee />
               </div>
            </div>
-       </div>      
+       </div> 
+
        <div className="container">
           <div className="row">
              <div className = "col-md-12">
