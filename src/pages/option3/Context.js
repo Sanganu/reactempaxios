@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Detail from "./Detail";
+import {Table} from "react-bootstrap";
 
 const Context = () => {
     const [empRecords, setEmpRecords] = useState([])
@@ -13,7 +14,7 @@ const Context = () => {
             .then((employeeDetails) => {
                 // console.log(employeeDetails)
                 let employeeData = employeeDetails.results
-                console.log("Emp on contextjs", employeeData)
+                // console.log("Emp on contextjs", employeeData)
                 let employeeRecords = employeeData.map((employee) => (
                     {
                         name: employee.name.title + "." + employee.name.first + " " + employee.name.last,
@@ -25,15 +26,15 @@ const Context = () => {
                     }
                 ))
                 setEmpRecords(employeeRecords)
-                console.log(employeeRecords)
+                console.log("State",employeeRecords)
             })
     }, []);
 
     return (<div>
         <div className="row">
             <div className="col-md-12">
-                <h4>MDBREACT DATATABLE - With Hooks</h4>
-                <table>
+                <h4>Using useEffect for Axios call</h4>
+                 <Table responsive striped bordered hover variant="dark">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -47,7 +48,7 @@ const Context = () => {
                     <tbody>
                         {empRecords.map((employee, key) => <Detail key={key} employee={employee} />)}
                     </tbody>
-                </table>
+                </Table>
             </div>
         </div>
     </div>)

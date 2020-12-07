@@ -5,12 +5,12 @@ import React from "react";
 const Detail= (props) =>{
     return(<>
         <tr>
-            <th>{props.name}</th>
-            <th><img alt={props.name} src={props.pic} /></th>
-            <th>{props.dob}</th>
-            <th>{props.cell}</th>
-            <th>{props.email}</th>
-            <th>{props.uuid}</th>
+            <th>{props.employee.name}</th>
+            <th><img alt={props.employee.name} src={props.employee.pic} /></th>
+            <th>{props.employee.dob}</th>
+            <th>{props.employee.cell}</th>
+            <th>{props.employee.email}</th>
+            <th>{props.employee.uuid}</th>
         </tr>
     </>)
 }
