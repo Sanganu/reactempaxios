@@ -5,6 +5,7 @@ import {Table} from "react-bootstrap";
 const Context = () => {
     const [empRecords, setEmpRecords] = useState([])
     const[employeeDB,setEmployeeDB]= useState([])
+    const [change,setChange] =useState(false)
 
     useEffect(() => {
         fetch("https://randomuser.me/api/?results=15&nat=us", {
@@ -36,10 +37,17 @@ const Context = () => {
 
     const sortName = (sortOrder) =>{
         console.log(sortOrder,"Order")
+        let tempEmpRecords = empRecords;
+        let final = 0;
         if( sortOrder === "ASC"){
-            let tempEmpRecords = empRecords;
+
             for(let i=0;i< tempEmpRecords.length-1;i++){
-                for(let j=i+1;j<tempEmpRecords.length-1;j++){
+                if( i === tempEmpRecords.length-1){
+                    final = i
+                }else{
+                    final = i+1
+                }
+                for(let j=final;j<tempEmpRecords.length-1;j++){
                     if(tempEmpRecords[i].name > tempEmpRecords[j].name){
                         let swap = tempEmpRecords[i]
                         tempEmpRecords[i] = tempEmpRecords[j]
@@ -47,13 +55,16 @@ const Context = () => {
                     }
                 }
             }
-            setEmpRecords(tempEmpRecords)
-            console.log(tempEmpRecords,empRecords)
          
         }else{
-            let tempEmpRecords = empRecords;
+  
             for(let i=0;i< tempEmpRecords.length-1;i++){
-                for(let j=i+1;j<tempEmpRecords.length-1;j++){
+                if( i === tempEmpRecords.length-1){
+                    final = i
+                }else{
+                    final = i+1
+                }
+                for(let j=final;j<tempEmpRecords.length-1;j++){
                     if(tempEmpRecords[i].name < tempEmpRecords[j].name){
                         let swap = tempEmpRecords[i]
                         tempEmpRecords[i] = tempEmpRecords[j]
@@ -61,9 +72,13 @@ const Context = () => {
                     }
                 }
             }
-            setEmpRecords(tempEmpRecords)
-            console.log(tempEmpRecords,empRecords)
         }
+        setEmpRecords(tempEmpRecords)
+        if (change)
+        setChange(false)
+        else
+        setChange(true)
+        console.log(tempEmpRecords,empRecords)
     }
 
     const sortDOB = () => {
