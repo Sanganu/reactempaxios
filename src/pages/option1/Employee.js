@@ -7,9 +7,9 @@ class Employee extends Component {
         rows: []
     }
     componentDidMount = () => {
-        axios.get("https://randomuser.me/api/?results=30&nat=us")
+        axios.get("https://randomuser.me/api/?results=15&nat=us")
             .then((employeeRecords) => {
-                console.log(employeeRecords);
+                // console.log(employeeRecords);
                 let emprec = employeeRecords.data.results;
                 let employeedata = []
                 for (let i = 0; i < emprec.length; i++) {
@@ -24,7 +24,7 @@ class Employee extends Component {
                     employeedata.push(record)
                 }
                 this.setState({ rows: employeedata }, () => {
-                    console.log("State", this.state.rows)
+                    // console.log("State", this.state.rows)
                 })
             })
     }
@@ -32,7 +32,7 @@ class Employee extends Component {
         return (<div className="container bg-info">
                 <div className="row">
                     <div className="col-md-12">
-                        <h4>MDBREACT DATATABLE - With state</h4>
+                        <h4>MDBREACT DATATABLE - With Class Component</h4>
                         <EmployeeData rows={this.state.rows} />
                     </div>
                 </div>

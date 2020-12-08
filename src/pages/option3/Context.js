@@ -4,9 +4,11 @@ import {Table} from "react-bootstrap";
 
 const Context = () => {
     const [empRecords, setEmpRecords] = useState([])
+    const[employeeDB,setEmployeeDB]= useState([])
+
     useEffect(() => {
-        fetch("https://randomuser.me/api/?results=30&nat=us", {
-            "Access-Control-Allow-Origin": "cors"
+        fetch("https://randomuser.me/api/?results=15&nat=us", {
+            "Access-Control-Allow-Origin": "no-cors"
         })
             .then((data) => {
                 return data.json()
@@ -17,7 +19,8 @@ const Context = () => {
                 // console.log("Emp on contextjs", employeeData)
                 let employeeRecords = employeeData.map((employee) => (
                     {
-                        name: employee.name.title + "." + employee.name.first + " " + employee.name.last,
+                        title:employee.name.title,
+                        name:  employee.name.first + " " + employee.name.last,
                         pic: employee.picture.thumbnail,
                         dob: employee.dob.date,
                         cell: employee.cell,
@@ -26,21 +29,66 @@ const Context = () => {
                     }
                 ))
                 setEmpRecords(employeeRecords)
-                console.log("State",employeeRecords)
+                setEmployeeDB(employeeRecords)
+                // console.log("State",employeeRecords)
             })
     }, []);
 
-    return (<div>
+    const sortName = (sortOrder) =>{
+        console.log(sortOrder,"Order")
+        if( sortOrder === "ASC"){
+            let tempEmpRecords = empRecords;
+            for(let i=0;i< tempEmpRecords.length-1;i++){
+                for(let j=i+1;j<tempEmpRecords.length-1;j++){
+                    if(tempEmpRecords[i].name > tempEmpRecords[j].name){
+                        let swap = tempEmpRecords[i]
+                        tempEmpRecords[i] = tempEmpRecords[j]
+                        tempEmpRecords[j] = swap
+                    }
+                }
+            }
+            setEmpRecords(tempEmpRecords)
+            console.log(tempEmpRecords,empRecords)
+         
+        }else{
+            let tempEmpRecords = empRecords;
+            for(let i=0;i< tempEmpRecords.length-1;i++){
+                for(let j=i+1;j<tempEmpRecords.length-1;j++){
+                    if(tempEmpRecords[i].name < tempEmpRecords[j].name){
+                        let swap = tempEmpRecords[i]
+                        tempEmpRecords[i] = tempEmpRecords[j]
+                        tempEmpRecords[j] = swap
+                    }
+                }
+            }
+            setEmpRecords(tempEmpRecords)
+            console.log(tempEmpRecords,empRecords)
+        }
+    }
+
+    const sortDOB = () => {
+
+    }
+
+    return (<div className="container">
         <div className="row">
             <div className="col-md-12">
-                <h4>Using useEffect for Axios call</h4>
+                <h4>Employee Database - useState/useEffect</h4>
                  <Table responsive striped bordered hover variant="dark">
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Name
+                                <button onClick={() => sortName("ASC")}>&uarr;</button>
+                                <button onClick={() => sortName("DESC")}>&darr;</button>
+                             </th>
                             <th>Profile Pic</th>
-                            <th>DOB</th>
-                            <th>Cell</th>
+                            <th>DOB
+                                <button onClick={() => sortDOB("ASC")}>&uarr;</button>
+                                <button onClick={() => sortDOB("DESC")}>&darr;</button>      
+                            </th>
+                            <th>
+                       `        Cell
+                            </th>
                             <th>Email</th>
                             <th>Id</th>
                         </tr>

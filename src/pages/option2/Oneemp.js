@@ -46,9 +46,9 @@ function Oneemp() {
     ]
 
     useEffect(() => {
-        axios.get("https://randomuser.me/api/?results=30&nat=us")
+        axios.get("https://randomuser.me/api/?results=15&nat=us")
             .then((records) => {
-                console.log("Records", records);
+                // console.log("Records", records);
                 let employeedetails = records.data.results.map((emp, i) => {
                     let rec = {
                         fname: emp.name.first,
@@ -67,7 +67,7 @@ function Oneemp() {
     return (<div className="container bg-secondary">
         <div className="row">
             <div className="col-md-12">
-                <h4 className="text-warap m-3 mb-3">MDBREACT DATATABLE - With Hooks</h4>
+                <h4 className="text-warap m-3 mb-3">MDBREACT DATATABLE - With useEffect</h4>
                 <MDBDataTable striped bordered hover data={{ columns: columns, rows: stateRows }} />
             </div>
         </div>

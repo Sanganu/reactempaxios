@@ -5,7 +5,7 @@ import React from "react";
 function NavTabs(props) {
   const tabs = ['IT Department', 'Production', 'Marketing', 'Home'];
   return (
-    <div>
+    <div className="text-center text-black">
       <h2> Employee Directory</h2>
 
       <ul className="nav nav-tabs">
