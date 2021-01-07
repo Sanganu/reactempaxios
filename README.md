@@ -1,6 +1,7 @@
 # Employee Directory
 
-Check the website [deployment]().
+
+[Website](https://sanganu.github.io/reactempaxios/#marketing).
 
 
 # Table of Contents
@@ -15,7 +16,7 @@ Check the website [deployment]().
 
 * [Screenshots](#screenshots)
 
-* [Developed By](#developed by)
+* [Developer](#developer)
 
 
 
@@ -53,12 +54,13 @@ Axios call to("https://randomuser.me/api/?results=15&nat=us")
 
 
 ## Screenshots
+[Screenshot]()
+[Screenshot]()
+[Screenshot]()
 
 
 
-
-
-## Developed By: 
+## Developer: 
 
 Sangeetha. K
 
