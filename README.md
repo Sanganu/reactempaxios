@@ -54,9 +54,9 @@ Axios call to("https://randomuser.me/api/?results=15&nat=us")
 
 
 ## Screenshots
-[Screenshot]()
-[Screenshot]()
-[Screenshot]()
+[Screenshot](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot1.PNG)
+[Screenshot](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot2.PNG)
+[Screenshot](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot3.PNG)
 
 
 
