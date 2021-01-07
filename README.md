@@ -45,7 +45,8 @@ Don't forget to follow.
 To get the deployment code(build) published using Github pages:
 git clone https://github.com/Sanganu/reactempaxios.git
 
-To get the source code - sourcode branch:
+To get the source code - sourecode branch:
+
 git clone -b sourcecode https://github.com/Sanganu/reactempaxios.git
 
 npm i
@@ -58,9 +59,11 @@ Axios call to("https://randomuser.me/api/?results=15&nat=us")
 
 
 ## Screenshots
-[Screenshot](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot1.PNG)
-[Screenshot](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot2.PNG)
-[Screenshot](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot3.PNG)
+[Screenshot1](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot1.PNG)
+
+[Screenshot2](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot2.PNG)
+
+[Screenshot3](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot3.PNG)
 
 
 
