@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/reactempaxios/static/css/main.ba47ad55.chunk.css",
+    "main.js": "/reactempaxios/static/js/main.6df0a8f0.chunk.js",
+    "main.js.map": "/reactempaxios/static/js/main.6df0a8f0.chunk.js.map",
+    "runtime-main.js": "/reactempaxios/static/js/runtime-main.e3ec77b8.js",
+    "runtime-main.js.map": "/reactempaxios/static/js/runtime-main.e3ec77b8.js.map",
+    "static/css/2.c61b1e8f.chunk.css": "/reactempaxios/static/css/2.c61b1e8f.chunk.css",
+    "static/js/2.74f686f7.chunk.js": "/reactempaxios/static/js/2.74f686f7.chunk.js",
+    "static/js/2.74f686f7.chunk.js.map": "/reactempaxios/static/js/2.74f686f7.chunk.js.map",
+    "index.html": "/reactempaxios/index.html",
+    "precache-manifest.44b3b491ad5682940bf9abbb8e0662bb.js": "/reactempaxios/precache-manifest.44b3b491ad5682940bf9abbb8e0662bb.js",
+    "service-worker.js": "/reactempaxios/service-worker.js",
+    "static/css/2.c61b1e8f.chunk.css.map": "/reactempaxios/static/css/2.c61b1e8f.chunk.css.map",
+    "static/css/main.ba47ad55.chunk.css.map": "/reactempaxios/static/css/main.ba47ad55.chunk.css.map",
+    "static/js/2.74f686f7.chunk.js.LICENSE.txt": "/reactempaxios/static/js/2.74f686f7.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/reactempaxios/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/reactempaxios/static/media/fa-solid-900.f3a7d3b5.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3ec77b8.js",
+    "static/css/2.c61b1e8f.chunk.css",
+    "static/js/2.74f686f7.chunk.js",
+    "static/css/main.ba47ad55.chunk.css",
+    "static/js/main.6df0a8f0.chunk.js"
+  ]
+}
