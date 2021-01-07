@@ -42,7 +42,11 @@ Don't forget to follow.
 
 ## Installation
 
+To get the deployment code(build) published using Github pages:
 git clone https://github.com/Sanganu/reactempaxios.git
+
+To get the source code - sourcode branch:
+git clone -b sourcecode https://github.com/Sanganu/reactempaxios.git
 
 npm i
 
