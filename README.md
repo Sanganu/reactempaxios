@@ -64,4 +64,4 @@ Sangeetha. K
 
 Senior Tutor & Centralized Grader,
 
-Trilogy Education Services
+Trilogy Education Services.
