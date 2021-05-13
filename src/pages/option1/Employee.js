@@ -7,7 +7,7 @@ class Employee extends Component {
         rows: []
     }
     componentDidMount = () => {
-        setInterval( () => {
+        setTimeout( () => {
         axios.get("https://randomuser.me/api/?results=15&nat=us")
             .then((employeeRecords) => {
                 // console.log(employeeRecords);

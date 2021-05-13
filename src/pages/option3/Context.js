@@ -8,7 +8,7 @@ const Context = () => {
     const [change,setChange] =useState(false)
 
     useEffect(() => {
-        setInterval( () => {
+        setTimeout( () => {
                 fetch("https://randomuser.me/api/?results=15&nat=us", {
                     "Access-Control-Allow-Origin": "no-cors"
                 })

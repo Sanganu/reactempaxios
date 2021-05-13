@@ -48,7 +48,7 @@ function Oneemp() {
   
     useEffect(() => {
 
-      setInterval(() =>{
+    setTimeout(() =>{
         axios.get("https://randomuser.me/api/?results=15&nat=us")
         .then((records) => {
             // console.log("Records", records);
