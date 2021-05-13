@@ -29,11 +29,6 @@ function EmployeeData(props){
             {
                 label:"Phone",
                 field:"phone"
-            },
-            {
-                label:"Profile",
-                field:"profile",
-                tag:"img"
             }
         ],
         rows: props.rows
