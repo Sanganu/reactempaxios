@@ -7,6 +7,7 @@ class Employee extends Component {
         rows: []
     }
     componentDidMount = () => {
+        setInterval( () => {
         axios.get("https://randomuser.me/api/?results=15&nat=us")
             .then((employeeRecords) => {
                 // console.log(employeeRecords);
@@ -27,6 +28,7 @@ class Employee extends Component {
                     // console.log("State", this.state.rows)
                 })
             })
+        }, 3000);   
     }
     render() {
         return (<div className="container bg-info">

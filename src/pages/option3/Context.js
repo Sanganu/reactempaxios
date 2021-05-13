@@ -8,31 +8,33 @@ const Context = () => {
     const [change,setChange] =useState(false)
 
     useEffect(() => {
-        fetch("https://randomuser.me/api/?results=15&nat=us", {
-            "Access-Control-Allow-Origin": "no-cors"
-        })
-            .then((data) => {
-                return data.json()
-            })
-            .then((employeeDetails) => {
-                // console.log(employeeDetails)
-                let employeeData = employeeDetails.results
-                // console.log("Emp on contextjs", employeeData)
-                let employeeRecords = employeeData.map((employee) => (
-                    {
-                        title:employee.name.title,
-                        name:  employee.name.first + " " + employee.name.last,
-                        pic: employee.picture.thumbnail,
-                        dob: employee.dob.date,
-                        cell: employee.cell,
-                        email: employee.email,
-                        uuid: employee.login.username
-                    }
-                ))
-                setEmpRecords(employeeRecords)
-                setEmployeeDB(employeeRecords)
-                // console.log("State",employeeRecords)
-            })
+        setInterval( () => {
+                fetch("https://randomuser.me/api/?results=15&nat=us", {
+                    "Access-Control-Allow-Origin": "no-cors"
+                })
+                .then((data) => {
+                    return data.json()
+                })
+                .then((employeeDetails) => {
+                    // console.log(employeeDetails)
+                    let employeeData = employeeDetails.results
+                    // console.log("Emp on contextjs", employeeData)
+                    let employeeRecords = employeeData.map((employee) => (
+                        {
+                            title:employee.name.title,
+                            name:  employee.name.first + " " + employee.name.last,
+                            pic: employee.picture.thumbnail,
+                            dob: employee.dob.date,
+                            cell: employee.cell,
+                            email: employee.email,
+                            uuid: employee.login.username
+                        }
+                    ))
+                    setEmpRecords(employeeRecords)
+                    setEmployeeDB(employeeRecords)
+                    // console.log("State",employeeRecords)
+                })
+            },3000)
     }, []);
 
     const sortName = (sortOrder) =>{

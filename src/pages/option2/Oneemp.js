@@ -45,24 +45,27 @@ function Oneemp() {
         }
     ]
 
+  
     useEffect(() => {
+
+      setInterval(() =>{
         axios.get("https://randomuser.me/api/?results=15&nat=us")
-            .then((records) => {
-                // console.log("Records", records);
-                let employeedetails = records.data.results.map((emp, i) => {
-                    let rec = {
-                        fname: emp.name.first,
-                        lname: emp.name.last,
-                        email: emp.email,
-                        phone: emp.cell,
-                        location: emp.location.city + " " + emp.location.country
-                    }
-                    return (rec)
-                })
-                setStateRows(employeedetails)
+        .then((records) => {
+            // console.log("Records", records);
+            let employeedetails = records.data.results.map((emp, i) => {
+                let rec = {
+                    fname: emp.name.first,
+                    lname: emp.name.last,
+                    email: emp.email,
+                    phone: emp.cell,
+                    location: emp.location.city + " " + emp.location.country
+                }
+                return (rec)
             })
-    }
-        , [])
+            setStateRows(employeedetails)
+        })
+      },3000)
+    }, [])
 
     return (<div className="container bg-secondary">
         <div className="row">
