@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/reactempaxios/static/css/main.4a1efd15.chunk.css",
+    "main.js": "/reactempaxios/static/js/main.190af27d.chunk.js",
+    "main.js.map": "/reactempaxios/static/js/main.190af27d.chunk.js.map",
+    "runtime-main.js": "/reactempaxios/static/js/runtime-main.e3ec77b8.js",
+    "runtime-main.js.map": "/reactempaxios/static/js/runtime-main.e3ec77b8.js.map",
+    "static/css/2.85c0971c.chunk.css": "/reactempaxios/static/css/2.85c0971c.chunk.css",
+    "static/js/2.56839624.chunk.js": "/reactempaxios/static/js/2.56839624.chunk.js",
+    "static/js/2.56839624.chunk.js.map": "/reactempaxios/static/js/2.56839624.chunk.js.map",
+    "index.html": "/reactempaxios/index.html",
+    "precache-manifest.b47f0e811571b59082adf1c1739bcb9c.js": "/reactempaxios/precache-manifest.b47f0e811571b59082adf1c1739bcb9c.js",
+    "service-worker.js": "/reactempaxios/service-worker.js",
+    "static/css/2.85c0971c.chunk.css.map": "/reactempaxios/static/css/2.85c0971c.chunk.css.map",
+    "static/css/main.4a1efd15.chunk.css.map": "/reactempaxios/static/css/main.4a1efd15.chunk.css.map",
+    "static/js/2.56839624.chunk.js.LICENSE.txt": "/reactempaxios/static/js/2.56839624.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/reactempaxios/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/reactempaxios/static/media/fa-solid-900.9ae050d1.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3ec77b8.js",
+    "static/css/2.85c0971c.chunk.css",
+    "static/js/2.56839624.chunk.js",
+    "static/css/main.4a1efd15.chunk.css",
+    "static/js/main.190af27d.chunk.js"
+  ]
+}
