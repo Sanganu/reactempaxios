@@ -55,11 +55,11 @@ Axios call to("https://randomuser.me/api/?results=15&nat=us")
 
 
 ## Screenshots
-! [Screenshot1](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot1.PNG)
+![Screenshot1](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot1.PNG)
 
-! [Screenshot2](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot2.PNG)
+![Screenshot2](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot2.PNG)
 
-! [Screenshot3](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot3.PNG)
+![Screenshot3](https://github.com/Sanganu/reactempaxios/blob/sourcecode/Screenshot3.PNG)
 
 
 
